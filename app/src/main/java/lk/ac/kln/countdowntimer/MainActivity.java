@@ -53,15 +53,25 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
     @Override
-    public void onStart(){
-        super.onStart();
+    public void onPause(){
+        super.onPause();
+    }
+
+
+
+
+    @Override
+    public void onRestart(){
+        super.onRestart();
+        running = true;
     }
 
     @Override
     public void onStop() {
 
         super.onStop();
-        wasrunning =true;
+        running =false;
     }
 }
